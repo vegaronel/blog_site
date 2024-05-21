@@ -1,0 +1,26 @@
+
+<%- include("partials/header.ejs") %>
+<body>
+
+<div class="container">
+
+
+    <h2>Add a post</h2>
+
+    <form action="submit" method="post">
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" required>
+      </div>
+      <div class="mb-3">
+      
+        <textarea class="form-control" name="tweet" id="exampleFormControlTextarea1" rows="3" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Post</button>
+      </form>
+
+    </div>
+
+<%- include("partials/footer.ejs") %>
+</html>

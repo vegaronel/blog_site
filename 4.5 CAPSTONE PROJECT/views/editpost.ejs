@@ -1,0 +1,33 @@
+
+<%- include("partials/header.ejs") %>
+<body>
+
+  
+ 
+<div class="container">
+    <h1>Edit your post</h1>
+<% if (locals.post) { %>
+    <form action="/posts/<%= post.id %>?_method=PUT" method="post">
+
+        <input type="text" name="name" value="<%= post.content %>" required>
+        <textarea class="form-control" name="message" rows="3"  required><%= post.title %></textarea>
+        
+            <button type="submit" class="btn-success">Update</button>
+        </form>
+<% } %>
+    
+
+</div>
+
+
+
+
+
+        
+
+    
+</body>
+
+    
+<%- include("partials/footer.ejs") %>
+</html>
